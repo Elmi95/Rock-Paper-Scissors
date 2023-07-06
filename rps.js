@@ -8,7 +8,7 @@ function playRound (compSelect,playerSelect){
         return 'Its a Draw'
     }else{
         if(compSelect === 'rock' && playerSelect === 'paper'){
-            return 'You Lose! Paper beats Rock'
+            return 'You Win! Paper beats Rock'
         }else{
             if (compSelect === 'scissors' && playerSelect === 'rock'){
                 return 'You Win! Rock beats Scissors'
@@ -34,10 +34,18 @@ function playRound (compSelect,playerSelect){
 }
    
 
-var playerSelect = 'scissors'
-var compSelect = GetCompChoice()
-
-console.log(playRound(compSelect,playerSelect))
+const rock = document.querySelector('.rock')
+rock.addEventListener('click',function(){
+    console.log(playRound(),'Rock')
+})
+const paper = document.querySelector('.paper')
+paper.addEventListener('click',function(){
+    console.log(playRound(),'Paper')
+})
+const scissors = document.querySelector('.scissors')
+scissors.addEventListener('click',function(){
+    console.log(playRound(),('Scissors'))
+})
 
 
 
